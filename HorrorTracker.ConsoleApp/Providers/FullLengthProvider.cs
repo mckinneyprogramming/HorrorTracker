@@ -70,10 +70,8 @@ namespace HorrorTracker.ConsoleApp.Providers
                     continue;
                 }
 
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"The movie series '{newSeries.Title}' was added successfully.");
+                ConsoleHelper.ColorWriteLineWithReset($"The movie series '{newSeries.Title}' was added successfully.", ConsoleColor.Green);
                 Thread.Sleep(1000);
-                Console.ResetColor();
 
                 var addedSeries = movieSeriesRepository.GetByTitle(newSeries.Title);
                 if (addedSeries == null)
@@ -108,10 +106,8 @@ namespace HorrorTracker.ConsoleApp.Providers
                 return;
             }
 
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"The movie series '{series.Title}' was added successfully.");
+            ConsoleHelper.ColorWriteLineWithReset($"The movie series '{series.Title}' was added successfully.", ConsoleColor.Green);
             Thread.Sleep(1000);
-            Console.ResetColor();
 
             var newSeries = movieSeriesRepository.GetByTitle(series.Title);
             if (newSeries == null)
@@ -129,10 +125,8 @@ namespace HorrorTracker.ConsoleApp.Providers
         /// <param name="title">The series title.</param>
         private static void SeriesAddedToDatabaseMessages(string title)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Movie series: {title} was added successfully as well as the movies in the series.");
+            ConsoleHelper.ColorWriteLineWithReset($"Movie series: {title} was added successfully as well as the movies in the series.", ConsoleColor.Green);
             Thread.Sleep(2000);
-            Console.ResetColor();
         }
 
         /// <summary>

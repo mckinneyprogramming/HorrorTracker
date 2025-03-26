@@ -22,9 +22,7 @@ namespace HorrorTracker.Utilities.Logging
         /// </summary>
         public LoggerService()
         {
-#pragma warning disable CS8604 // Possible null reference argument.
             _logger = new LoggerConfiguration().WriteTo.Seq(LoggerUrl).CreateLogger();
-#pragma warning restore CS8604 // Possible null reference argument.
         }
 
         /// <inheritdoc/>

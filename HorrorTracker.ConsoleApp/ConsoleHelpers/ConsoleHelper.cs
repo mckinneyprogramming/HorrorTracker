@@ -67,14 +67,14 @@ namespace HorrorTracker.ConsoleApp.ConsoleHelpers
         }
 
         /// <summary>
-        /// Prints a title with a specified color.
+        /// Prints a message with a specified color.
         /// </summary>
-        /// <param name="title">The title text.</param>
+        /// <param name="message">The message text.</param>
         /// <param name="color">The console color.</param>
-        public static void ColorWriteLineWithReset(string title, ConsoleColor color)
+        public static void ColorWriteLineWithReset(string message, ConsoleColor color)
         {
             Console.ForegroundColor = color;
-            Console.WriteLine(title);
+            Console.WriteLine(message);
             Console.ResetColor();
         }
 
